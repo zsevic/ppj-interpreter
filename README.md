@@ -9,3 +9,7 @@
     antlr4 Vectors.g4
 	javac Vectors*.java
 	grun Vectors vectors	 
+
+### Test (JavaScript)
+    antlr4 -Dlanguage=JavaScript Vectors.g4
+    node antlr.js
