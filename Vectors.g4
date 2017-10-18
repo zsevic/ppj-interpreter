@@ -44,4 +44,6 @@ declaration: ID AO e
 assignment: ID AO e
     ;
 
-e: LP NUM COMMA NUM COMMA NUM RP ;
+e: LP NUM COMMA NUM COMMA NUM RP
+    | ID
+    ;

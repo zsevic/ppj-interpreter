@@ -25,8 +25,13 @@ MainListener.prototype.enterDeclaration = function(ctx) {
 MainListener.prototype.exitDeclaration = function(ctx) {
     let id = ctx.ID().getText();
     if(ctx.children.length===3){
-        let tmp = JSON.parse(ctx.children[2].getText());
-        this.table[id] = tmp.slice();
+        if(ctx.children[2].ID()!=null){
+            let tmp = this.table[ctx.children[2].ID().getText()];
+            this.table[id] = tmp.slice();
+        }else{
+            let tmp = JSON.parse(ctx.children[2].getText());
+            this.table[id] = tmp.slice();
+        }
     }else{
         this.table[id] = [0,0,0];
     }
@@ -34,12 +39,17 @@ MainListener.prototype.exitDeclaration = function(ctx) {
 
 MainListener.prototype.exitAssignment = MainListener.prototype.exitDeclaration;
 
-MainListener.prototype.enterE = function(ctx) {
-    let tmp=[];
-    for(let i=1;i<=5;i+=2){
-        tmp.push(ctx.children[i].getText());
+MainListener.prototype.exitE = function(ctx) {
+    if(ctx.ID()){
+        id=ctx.ID().getText();
+        return this.table[id].slice();
+    }else{
+        let tmp=[];
+        for(let i=1;i<=5;i+=2){
+            tmp.push(ctx.children[i].getText());
+        }
+        return tmp;
     }
-    return tmp;
 };
 
 exports.MainListener = MainListener;
