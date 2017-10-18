@@ -4,7 +4,7 @@ grammar Vectors;
  * Lexer rules
  */
 
-NUM : '-'?[1-9][0-9]*('.'[0-9][0-9]*)? ;
+NUM : '-'?([0]|[1-9][0-9]*)('.'[0-9][0-9]*)? ;
 VECTOR : 'v' 'e' 'c' 't' 'o' 'r' ;
 PRINT : 'p' 'r' 'i' 'n' 't' ;
 ID : [a-z][a-z0-9]* ;
@@ -15,7 +15,6 @@ COMMA : ',' ;
 SEMICOLON : ';' ;
 WHITESPACE : (' ' | '\t') -> skip ;
 NEWLINE: ('\r'? '\n' | '\r')+ -> skip;
-ANY : . ;
 
 /*
  * Parser rules

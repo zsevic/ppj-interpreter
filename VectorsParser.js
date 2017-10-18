@@ -5,9 +5,9 @@ var VectorsListener = require('./VectorsListener').VectorsListener;
 var grammarFileName = "Vectors.g4";
 
 var serializedATN = ["\u0003\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964",
-    "\u0003\u000eF\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004\t",
-    "\u0004\u0004\u0005\t\u0005\u0004\u0006\t\u0006\u0004\u0007\t\u0007\u0004",
-    "\b\t\b\u0003\u0002\u0003\u0002\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
+    "\u0003\rF\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004\t\u0004",
+    "\u0004\u0005\t\u0005\u0004\u0006\t\u0006\u0004\u0007\t\u0007\u0004\b",
+    "\t\b\u0003\u0002\u0003\u0002\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
     "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0007\u0003\u001b",
     "\n\u0003\f\u0003\u000e\u0003\u001e\u000b\u0003\u0003\u0004\u0003\u0004",
     "\u0003\u0004\u0003\u0004\u0003\u0004\u0005\u0004%\n\u0004\u0003\u0005",
@@ -56,8 +56,7 @@ var literalNames = [ null, null, null, null, null, "'['", "']'", "'='",
                      "','", "';'" ];
 
 var symbolicNames = [ null, "NUM", "VECTOR", "PRINT", "ID", "LP", "RP", 
-                      "AO", "COMMA", "SEMICOLON", "WHITESPACE", "NEWLINE", 
-                      "ANY" ];
+                      "AO", "COMMA", "SEMICOLON", "WHITESPACE", "NEWLINE" ];
 
 var ruleNames =  [ "vectors", "array_of_statements", "statement", "array_of_declarations", 
                    "declaration", "assignment", "e" ];
@@ -92,7 +91,6 @@ VectorsParser.COMMA = 8;
 VectorsParser.SEMICOLON = 9;
 VectorsParser.WHITESPACE = 10;
 VectorsParser.NEWLINE = 11;
-VectorsParser.ANY = 12;
 
 VectorsParser.RULE_vectors = 0;
 VectorsParser.RULE_array_of_statements = 1;
