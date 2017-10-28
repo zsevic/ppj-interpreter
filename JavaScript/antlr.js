@@ -5,7 +5,7 @@ const Parser = require('./VectorsParser');
 const MainListener = require('./MainListener').MainListener;
 
 //let input = 'vector p=[1,-2,3.2],p3;print p3;p3=[1,2,4];p3=p;print p3;';
-let input = fs.readFileSync('./test.txt','utf-8');
+let input = fs.readFileSync('../test.txt','utf-8');
 
 let chars = new antlr4.InputStream(input);
 let lexer = new Lexer.VectorsLexer(chars);

@@ -1,4 +1,5 @@
-node_modules
+JavaScript/node_modules
+Python/*.pyc
 
 *.class
 *.java

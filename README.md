@@ -11,5 +11,11 @@
 	grun Vectors vectors	 
 
 ### Test (JavaScript)
-    antlr4 -Dlanguage=JavaScript Vectors.g4
+    cd JavaScript
+    antlr4 -Dlanguage=JavaScript ../Vectors.g4
     node antlr.js
+    
+### Test (Python)
+    cd Python
+    antlr4 -Dlanguage=Python2 ../Vectors.g4
+    python2.7 antlr.py
