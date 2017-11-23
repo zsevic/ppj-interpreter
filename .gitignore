@@ -1,5 +1,7 @@
-JavaScript/node_modules
-Python/*.pyc
+*.pyc
 
-*.class
-*.java
+VectorsLexer.py
+VectorsLexer.tokens
+VectorsListener.py
+VectorsParser.py
+Vectors.tokens

@@ -4,7 +4,7 @@ from VectorsParser import VectorsParser
 from MainListener import MainListener
 
 def main():
-    input = FileStream('../test.txt')
+    input = FileStream('./test.txt')
     lexer = VectorsLexer(input)
     stream = CommonTokenStream(lexer)
     parser = VectorsParser(stream)
